@@ -1,13 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linda</title>
+    <title>Linda Larbi</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="app-header">My beautiful room</div>
+      <div id="viewer">
+        <a-scene
+          background="color: #E6DCC8"
+          fog="type: exponential; color: #E6DCC8; density: 0.0015"
+          renderer="antialias: true; precision: high; colorManagement: true"
+          xr-mode-ui="XRMode: xr"
+          webxr="requiredFeatures: local-floor; optionalFeatures: bounded-floor,unbounded"
+          loading-screen="dotsColor: white; backgroundColor: #333333"
+          keyboard-shortcuts="enterVR: true; exitVR: true"
+        >
+          <a-assets>
+            <img id="wood-texture" src="/assets/images/wood.jpg" />
+            <img id="wall" src="/assets/images/earth-sphere.jpg" />
+            <img id="tiles" src="/assets/images/tiles.jpg" />
+            <img id="bubbles" src="/assets/images/bubbles.jpg" />
+            <img id="plaster" src="/assets/images/plaster.jpg" />
+            <img id="milk" src="/assets/images/milk.jpg" />
+            <img id="milo" src="/assets/images/milo.jpg" />
+            <img id="glass-texture" src="/assets/images/glass.jpg" />
+          </a-assets>
+        </a-scene>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
