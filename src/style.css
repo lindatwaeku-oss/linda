@@ -17,8 +17,9 @@ body {
   body {
     margin: 0;
     overflow: hidden;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #E9F5F2; /* fallback, a-scene sets real background */
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    background-color: #e9f5f2; /* fallback, a-scene sets real background */
     color: #0b2b2b;
   }
   #app {
@@ -45,7 +46,7 @@ body {
     border-radius: 12px;
     backdrop-filter: blur(6px);
     letter-spacing: 1px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   /* Interactive pointer helper for clickable entities */
@@ -59,5 +60,9 @@ body {
 
   /* Small responsive tweak */
   @media (max-width: 640px) {
-    .app-header { font-size: 15px; padding: 8px 14px; }
+    .app-header {
+      font-size: 15px;
+      padding: 8px 14px;
+    }
   }
+}
