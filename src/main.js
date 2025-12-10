@@ -266,7 +266,7 @@ function buildScene(scene) {
 
   // Milk Tin
   const milkTin = document.createElement("a-entity");
-  milkTin.setAttribute("position", "-0.8 -0.03 0");
+  milkTin.setAttribute("position", "-0.6 -0.03 0");
 
   const milkBody = document.createElement("a-cylinder");
   milkBody.setAttribute("position", "0 1.1 1");
@@ -339,7 +339,6 @@ function buildScene(scene) {
   buildChair(scene, "chair1", "-2.3 0 0", "0 90 0");
   buildChair(scene, "chair2", "2.3 0 0", "0 -90 0");
   buildChair(scene, "chair3", "0 0 -2.3", "0 180 0");
-  buildChair(scene, "chair4", "0 0 2.3", "0 -180 0");
 }
 
 // Creation of windows
@@ -490,38 +489,6 @@ function buildChair(scene, id, position, rotation) {
   scene.appendChild(chair);
 }
 
-function buildSconce(scene, position, xOffset) {
-  const sconce = document.createElement("a-entity");
-  sconce.setAttribute("position", position);
-
-  const bracket = document.createElement("a-box");
-  bracket.setAttribute("width", "0.08");
-  bracket.setAttribute("height", "0.15");
-  bracket.setAttribute("depth", "0.15");
-  bracket.setAttribute(
-    "material",
-    "color: #8B7355; roughness: 0.6; metalness: 0.2; toneMapped: true"
-  );
-  bracket.setAttribute("shadow", "cast: true");
-  sconce.appendChild(bracket);
-
-  const sphere = document.createElement("a-sphere");
-  sphere.setAttribute("position", `${xOffset} 0 0`);
-  sphere.setAttribute("radius", "0.08");
-  sphere.setAttribute("segments-height", "16");
-  sphere.setAttribute("segments-width", "16");
-  sphere.setAttribute(
-    "material",
-    "color: #FFE4B5; roughness: 0.3; metalness: 0.6; emissiveIntensity: 0.3; toneMapped: true"
-  );
-  sphere.setAttribute(
-    "light",
-    "type: point; color: #FFF; intensity: 0.3; distance: 8"
-  );
-  sconce.appendChild(sphere);
-
-  scene.appendChild(sconce);
-}
 
 function registerAframeComponents() {
   if (typeof AFRAME === "undefined" || !AFRAME.registerComponent) {
