@@ -440,30 +440,6 @@ function buildChair(scene, id, position, rotation) {
   backRest.setAttribute("shadow", "cast: true");
   chair.appendChild(backRest);
 
-  // Slim horizontal armrests (rounded)
-  const armrestLeft = document.createElement("a-cylinder");
-  armrestLeft.setAttribute("position", "-0.45 0.72 0");
-  armrestLeft.setAttribute("radius", "0.035");
-  armrestLeft.setAttribute("height", "0.7");
-  armrestLeft.setAttribute("rotation", "0 0 90");
-  armrestLeft.setAttribute(
-    "material",
-    "color: #5C4033; roughness: 0.75; metalness: 0.15; toneMapped: true"
-  );
-  armrestLeft.setAttribute("shadow", "cast: true");
-  chair.appendChild(armrestLeft);
-
-  const armrestRight = document.createElement("a-cylinder");
-  armrestRight.setAttribute("position", "0.45 0.72 0");
-  armrestRight.setAttribute("radius", "0.035");
-  armrestRight.setAttribute("height", "0.7");
-  armrestRight.setAttribute("rotation", "0 0 90");
-  armrestRight.setAttribute(
-    "material",
-    "color: #5C4033; roughness: 0.75; metalness: 0.15; toneMapped: true"
-  );
-  armrestRight.setAttribute("shadow", "cast: true");
-  chair.appendChild(armrestRight);
 
   // Slimmer legs
   const legPositions = [
