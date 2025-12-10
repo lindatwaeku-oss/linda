@@ -236,7 +236,7 @@ function buildScene(scene) {
 
   // MiLo Tin
   const miloTin = document.createElement("a-entity");
-  miloTin.setAttribute("position", "0.6 -0.03 -0.3");
+  miloTin.setAttribute("position", "0.9 -0.03 -0.3");
 
   const miloBody = document.createElement("a-cylinder");
   miloBody.setAttribute("position", "0 1.1 1");
